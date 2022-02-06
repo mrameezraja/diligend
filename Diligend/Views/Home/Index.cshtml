@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        if (User.IsInRole("admin"))
+        {
+            <p>
+                <a href="@Url.Action("Index", "Admin")">View Submissions</a>
+            </p>
+        }
+        else
+        {
+            <p>
+                <a href="@Url.Action("Colleges", "Student")">View Colleges</a>
+            </p>
+        }
+    }
+
+</div>

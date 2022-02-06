@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Diligend.Models.RegistrationFormVM
+
+    <div>
+        @using (Html.BeginForm(actionName: "Edit", controllerName: "Admin", null, method: FormMethod.Post, antiforgery: false, htmlAttributes: new { @class = "form-horizontal" }))
+        {
+            @Html.HiddenFor(m => m.Id)
+
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">First Name <span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "First Name" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Comments</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.FirstNameComments, new { @class = "form-control", placeholder = "Comments" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Score</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.FirstNameScore, new { @class = "form-control", placeholder = "Score" })
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Last Name <span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Last Name" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Comments</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.LastNameComments, new { @class = "form-control", placeholder = "Comments" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Score</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.LastNameScore, new { @class = "form-control", placeholder = "Score" })
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Age <span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.Age, new { @class = "form-control", placeholder = "Age" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Comments</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.AgeComments, new { @class = "form-control", placeholder = "Comments" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Score</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.AgeScore, new { @class = "form-control", placeholder = "Score" })
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">School Name <span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.SchoolName, new { @class = "form-control", placeholder = "School Name" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Comments</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.SchoolNameComments, new { @class = "form-control", placeholder = "Comments" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-sm-4 control-label text-left">Score</label>
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.SchoolNameScore, new { @class = "form-control", placeholder = "Score" })
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-md-8">
+                    <button type="submit" class="btn btn-primary btn-submit" data-loading-text="Processing..." id="btnSubmit">Submit</button>
+                </div>
+            </div>
+        }
+    </div>
+

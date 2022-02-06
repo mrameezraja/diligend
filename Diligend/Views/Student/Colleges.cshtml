@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Colleges";
+}
+
+@model List<Diligend.Data.Entities.College>
+
+    <h1>Colleges</h1>
+<div>
+    <table class="table table-bordered w-100">
+        <tr>
+            <th>College</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>
+                    <a href="@Url.Action("Index", "Student", new { Id = item.Id })">Register or View Submission</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

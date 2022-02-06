@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Submissions";
+}
+
+@model List<Diligend.Data.Entities.RegistrationForm>
+
+<h1>Submissions</h1>
+<div>
+    <table class="table table-bordered w-100">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Is Approved?</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.IsApproved</td>
+                <td>@item.CreationTime.ToString()</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Admin", new { Id = item.Id })">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
